@@ -20,13 +20,16 @@ if (isset($_POST['nombre']) and isset($_POST['apellido']) and
 	$fechaNac = $_POST['fechaNac'];
 	$mail = $_POST['mail'];
 
+
 	$sql = "INSERT INTO Persona (nombre, apellido, telefono, edad, fechaNac, mail) VALUES ('$nombre', '$apellido', '$telefono', '$edad', '$fechaNac', '$mail')";
 	mysqli_close($conn);
+
+	echo "Persona Agregada correctamente";
 }
 else 
 {
 
-    echo "hubo un problema al procesar la solicitud";
+    echo "Hubo un problema al procesar la solicitud";
 }
 
 
